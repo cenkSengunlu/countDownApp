@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container m-auto h-screen w-screen flex justify-center items-center flex-col">
+        <h1 class="text-center xl:text-8xl md:text-6xl text-4xl px-8 mb-16">COUNTDOWN APP</h1>
+        <div class="flex justify-center items-center flex-col">
+            <div id="nothing" class="flex justify-center items-center text-center xl:text-6xl md:text-5xl text-4xl mb-52">
+                <input type="number" onkeydown="controlEvent()" id="countDownInput" class="rounded-xl focus:outline-none bg-white text-black xl:w-64 md:w-48 w-32 text-left xl:px-4 md:px-3 sm:px-2 mr-16">
+                <div>
+                    <button class="z-0 xl:w-64 md:w-48 sm:w-32 allButtons" id="startButton" type="button">START</button>
+                    <button class="hidden xl:w-64 md:w-48 sm:w-32 z-10 allButtons" id="stopButton" type="button">STOP</button>
+                    <button class="hidden xl:w-64 md:w-48 sm:w-32 z-20 allButtons" id="continueButton" type="button">CONTINUE</button>
+                    <button class="hidden xl:w-64 md:w-48 sm:w-32 z-30 allButtons" id="restartButton" type="button">RESTART</button>
+                </div>
+            </div>
+            <h2 id="geriSayim" class="hidden text-red-500 xl:text-9xl md:text-5xl sm:text-4xl mt-20"></h2>
+        </div>
+        
+    </div>
+
+    <script src="countDown.js"></script>
+</body>
+</html>
